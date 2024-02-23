@@ -5,9 +5,10 @@ import authRoutes from "./routes/auth.routes.js";
 import connectToMongoDB from "./DB/connectToMongoDB.js";
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
-const PORT = process.env.PORT || 5000;
+
 
 // main page route
 app.get("/",(req, res)=>{
@@ -30,6 +31,7 @@ app.get("/api/auth/logout", (req, res)=> {
     console.log("Logout route");
 }); */
 
+app.use(express.json()); // parse incoming request with json (from req.body)
 // instead of the above, making code nicer with express 
 app.use("/api/auth", authRoutes);
 
