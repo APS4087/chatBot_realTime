@@ -30,14 +30,18 @@ export const signup = async(req, res)=>{
             profilePic,
         })
 
-        await newUser.save();
+        if(newUser){
+            await newUser.save();
 
-        res.status(201).json({
-            _id: newUser._id,
-            firstName: newUser.firstName,
-            lastName: newUser.lastName,
-            profilePic: newUser.profilePic,
-        });
+            res.status(201).json({
+                _id: newUser._id,
+                firstName: newUser.firstName,
+                lastName: newUser.lastName,
+                profilePic: newUser.profilePic,
+            });
+        }else{
+            res.status(400).json({error : "Invalid User Data."});
+        }
 
 
     } catch (error) {
