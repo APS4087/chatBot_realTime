@@ -18,4 +18,3 @@ Welcome to my Real-Time Chat Application GitHub repository! This project is curr
 - **Node.js**: JavaScript runtime environment used for server-side scripting.
 - **Socket.IO**: JavaScript library for real-time web applications, used for enabling real-time communication between clients and the server.
 - **JWT (JSON Web Tokens)**: Authentication mechanism used for securing user authentication.
-- **HTML/CSS**: Frontend markup and styling for creating a visually appealing user interface.
