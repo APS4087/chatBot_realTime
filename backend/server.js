@@ -26,7 +26,7 @@ app.use(cookieParser());
 // instead of the above, making code nicer with express 
 app.use("/api/auth", authRoutes);
 
-app.use("/api/message", messageRoutes);
+app.use("/api/messages", messageRoutes);
 
 app.listen(PORT, ()=> {
 
