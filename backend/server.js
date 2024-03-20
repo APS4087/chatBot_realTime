@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
+import userRoutes from "./routes/user.routes.js";
 import connectToMongoDB from "./DB/connectToMongoDB.js";
 
 
@@ -25,8 +26,8 @@ app.use(express.json()); // parse incoming request with json (from req.body)
 app.use(cookieParser());
 // instead of the above, making code nicer with express 
 app.use("/api/auth", authRoutes);
-
 app.use("/api/messages", messageRoutes);
+app.use("/api/users", userRoutes);
 
 app.listen(PORT, ()=> {
 
