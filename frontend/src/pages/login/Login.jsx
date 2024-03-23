@@ -22,6 +22,8 @@ const Login = () => {
                         <input type="password" className="grow" placeholder='Password'/>
                     </label>
                 </div>
+                <a href="#" className="link link-primary">Don't have an account?</a>
+                  
                 <div className="form-control mt-6">
                     <button className="btn btn-primary">Login</button>
                 </div>
